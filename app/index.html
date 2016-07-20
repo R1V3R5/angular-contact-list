@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cool Project</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body ng-app="app">
+    <div class="container" ng-controller="ContactController">
+      <form ng-submit="addContact(contact)" name="myForm">
+        <p class="control">
+          <input type="text" class="input" ng-model="contact.name" placeholder="Name" required>
+        </p>
+        <p class="control">
+          <input type="text" class="input" ng-model="contact.email" placeholder="Email" required>
+        </p>
+        <p class="control">
+          <input type="text" class="input" ng-model="contact.website" placeholder="Website" required>
+        </p>
+        <p class="control">
+          <textarea class="textarea" placeholder="Message" ng-model="contact.message" required></textarea>
+        </p>                        
+        <p class="control">
+          <button class="button" ng-disabled="myForm.$invalid">Add</button>
+        </p>
+      </form>
+      <hr><br>
+      <article class="message" ng-repeat="contact in contacts" data-id="{{ contact._id }}">
+        <div class="message-header">
+          {{ contact.name }} <span class="email">{{ contact.email }}</span>
+        </div>
+        
+        <div class="message-body">
+          <p class="website"> <a ng-href="{{ contact.website }} ">{{ contact.website }} </a></p>
+          <p class="msg"> {{ contact.message }} </p>
+        </div>
+      </article>    
+    </div>
+    <script src="js/bundle.js"></script>
+  </body>
+</html>
