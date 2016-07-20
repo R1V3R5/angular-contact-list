@@ -1,4 +1,4 @@
-[SURGE!](tiy-joshuarivers-angular-contact-list.surge.sh)
+[SURGE!](http://tiy-joshuarivers-angular-contact-list.surge.sh)
 
 ## Learning Objectives
 
