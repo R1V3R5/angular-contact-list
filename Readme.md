@@ -10,7 +10,7 @@ After completing this assignment, you should…
 ## Deliverables
 
 * A link to your repo
-* A deployed version on `surge.sh
+* A deployed version on `surge.sh`
 
 ## Normal Mode
 

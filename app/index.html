@@ -11,13 +11,13 @@
     <div class="container" ng-controller="ContactController">
       <form ng-submit="addContact(contact)" name="myForm">
         <p class="control">
-          <input type="text" class="input" ng-model="contact.name" placeholder="Name" required>
+          <input type="text" class="input" ng-model="contact.name" placeholder="Name" ng-keypress="checkName($event)" required>
         </p>
         <p class="control">
-          <input type="text" class="input" ng-model="contact.email" placeholder="Email" required>
+          <input type="email" class="input" ng-model="contact.email" placeholder="Email" ng-keypress="checkEmail($event)" required>
         </p>
         <p class="control">
-          <input type="text" class="input" ng-model="contact.website" placeholder="Website" required>
+          <input type="text" class="input" ng-model="contact.website" placeholder="Website" ng-keypress="checkWebsite($event)" required>
         </p>
         <p class="control">
           <textarea class="textarea" placeholder="Message" ng-model="contact.message" required></textarea>
